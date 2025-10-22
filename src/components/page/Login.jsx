@@ -1,13 +1,14 @@
 import login from "../../assets/login.jpg"
 import google from "../../assets/google-login.png"
 import { useState } from "react"
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 import { FaEye, FaEyeSlash, FaLeaf } from "react-icons/fa";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { DNA } from 'react-loader-spinner'
 
 const Login = () => {
+    const navigate = useNavigate()
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
     // variable for email
@@ -59,7 +60,7 @@ const Login = () => {
                     //duration
                     setTimeout(() => {
                         // finally go to the next page
-
+                          navigate("/inner")
                         //loadder false
                         setSignloadding(false)
                     }, 3000);
@@ -70,7 +71,7 @@ const Login = () => {
                     const errorCode = error.code;
                     console.log(errorCode);
                     // err toastify massage
-                    toast.error("Please, Provite right email & password.")
+                    toast.error("Please, Provite right Email & Password.")
                     setSignloadding(false)
                 });
         }
@@ -107,7 +108,7 @@ const Login = () => {
                     transition={Bounce}
                 />
             </div>
-            <div className="md:flex">
+            <div className="md:flex space-y-4">
                 <div className=" px-[70px] md:px-0 md:w-1/2 flex  md:justify-end pt-[10px] md:pt-[60px] bg-[#F5F5F5]">
                     <div className="md:mr-[174px]">
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary">Login to your account!</h1>
@@ -145,7 +146,7 @@ const Login = () => {
                         <div className="w-[250px] md:w-[368px] mt-[40px]">
                             {
                                 signloadding ?
-                                    <div className="flex justify-center items-center w-[368px] mt-[-10px]">
+                                    <div className="flex justify-center items-center w-[280px] md:w-[368px] mt-[-10px] ml-[-20px] md:ml-0">
                                         <DNA
                                             visible={true}
                                             height="60"

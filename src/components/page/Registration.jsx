@@ -70,7 +70,7 @@ const Registration = () => {
                         navigate("/login")
                         // loadding will be unActive.
                         setLoadding(false)
-                    }, 4000)
+                    }, 2000)
                 })
                 //  if show some error here
                 .catch((error) => {
@@ -89,7 +89,7 @@ const Registration = () => {
     }
     return (
         <div>
-            <div className="flex md:flex-row flex-col">
+            <div className="flex md:flex-row flex-col space-y-2">
                 {/* for toastify */}
                 <ToastContainer
                     position="top-center"
@@ -109,7 +109,7 @@ const Registration = () => {
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary pt-[50px] md:pt-0">Get started with easily register</h1>
                         <p className="font-secondary font-normal text-[16px] md:text-[20px] leading-auto text-secondary/50 md:mt-[-5px]">Free register and you can enjoy it</p>
                         {/* email */}
-                        <div className="w-[250px] md:w-[368px] relative mt-[30px]">
+                        <div className="w-[280px] md:w-[368px] relative mt-[30px]">
                             <input onChange={handleEmail}
                                 type="email"
                                 value={email}
@@ -119,7 +119,7 @@ const Registration = () => {
                             <p className="z-[666] bg-red-100 text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{emailErr}</p>
                         </div>
                         {/* fullName */}
-                        <div className="w-[250px] md:w-[368px] relative mt-[30px]">
+                        <div className="w-[280px] md:w-[368px] relative mt-[30px]">
                             <input onChange={handleFullName}
                                 type="text"
                                 value={fullName}
@@ -129,7 +129,7 @@ const Registration = () => {
                             <p className="z-[666] bg-red-100 text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{fullNameErr}</p>
                         </div>
                         {/* password */}
-                        <div className="w-[250px] md:w-[368px] relative mt-[30px]">
+                        <div className="w-[280px] md:w-[368px] relative mt-[30px]">
                             <input onChange={handlePassword}
                                 value={password}
                                 type={show ? "text" : "password"}
@@ -146,7 +146,7 @@ const Registration = () => {
                             <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-[#F5F5F5] py-2 px-4 tracking-[1.5px]">Password</div>
                             <p className="z-[666] bg-red-100 text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{passwordErr}</p>
                         </div>
-                        <div className="relative w-[250px] md:w-[368px] mt-[25px]">
+                        <div className="relative w-[280px] md:w-[368px] mt-[25px]">
                             {
                                 loadding ?
                                     <div className="flex justify-center items-center mt-[-10px] md:mt-[-20px] scale-90">
