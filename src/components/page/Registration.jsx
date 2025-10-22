@@ -1,5 +1,5 @@
 import { use, useState } from "react"
-import Registration1 from "../../assets/registration.png"
+import registrationpage from "../../assets/registration.png"
 import { Link, useNavigate } from "react-router"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
@@ -175,7 +175,7 @@ const Registration = () => {
                     </div>
                 </div>
                 <div className=" md:w-1/2">
-                    <img src={Registration1} alt="" className="w-full h-screen object-cover" />
+                    <img src={registrationpage} alt="" className="w-full h-screen object-cover" />
                 </div>
             </div>
         </div>
