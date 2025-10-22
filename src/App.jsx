@@ -9,7 +9,7 @@ import Home from "./components/page/Home";
 function App() {
   const router = createBrowserRouter([
      {
-      path: "/home",
+      path: "/",
       element: <Home></Home>,
     },
     {

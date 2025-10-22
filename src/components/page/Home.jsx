@@ -3,16 +3,17 @@ import { DNA } from 'react-loader-spinner'
 import { Link, useNavigate } from 'react-router'
 
 const Home = () => {
+    // for login page
     const navigate = useNavigate()
+    // variable for login page
     const [start, setStart] = useState(false)
-
+    // start button control
     const handleStart = () => {
         setStart(true)
         setTimeout(() => {
             navigate("/registration")
         }, 2000)
     }
-
     return (
         <div className='bg-[url(./assets/home11.webp)] bg-center bg-cover w-full h-screen flex justify-center items-center'>
             <div className='bg-linear-to-r/srgb from-[#f36481] to-[hsl(18,80%,67%)] py-[10px] md:py-[30px] px-[10px] md:px-[80px] rounded-[10px] text-center border-4 border-[#e39b9b]'>

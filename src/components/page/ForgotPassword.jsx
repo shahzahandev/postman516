@@ -33,6 +33,7 @@ const ForgotPassword = () => {
           toast.success("Check your Email & Set a new Password.")
           // success here
           console.log(user);
+          // delay for go to login page
           setTimeout(() => {
             navigate("/login")
           }, 5000)
