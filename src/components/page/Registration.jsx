@@ -1,5 +1,5 @@
 import { use, useState } from "react"
-import registrationpage from "../../assets/registration.png"
+import registrationpage from "../../assets/regis1.png"
 import { Link, useNavigate } from "react-router"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
