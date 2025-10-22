@@ -4,9 +4,14 @@ import Registration from "./components/page/Registration";
 import Login from "./components/page/Login";
 import firebaseConfig from "./components/page/firebase/firebaseConfig";
 import ForgotPassword from "./components/page/ForgotPassword";
+import Home from "./components/page/Home";
 
 function App() {
   const router = createBrowserRouter([
+     {
+      path: "/home",
+      element: <Home></Home>,
+    },
     {
       path: "/registration",
       element: <Registration></Registration>,

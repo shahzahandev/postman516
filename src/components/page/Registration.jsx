@@ -1,10 +1,10 @@
 import { use, useState } from "react"
-import registration from "../../assets/registration.png"
+import Registration1 from "../../assets/registration.png"
 import { Link, useNavigate } from "react-router"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
-import { RotatingLines } from 'react-loader-spinner'
+import { DNA } from 'react-loader-spinner'
 
 const Registration = () => {
     const auth = getAuth();
@@ -104,12 +104,12 @@ const Registration = () => {
                     theme="dark"
                     transition={Bounce}
                 />
-                <div className=" md:w-1/2 flex justify-center md:justify-end md:pt-[70px] bg-[#F5F5F5]">
+                <div className="w-full md:w-1/2 flex px-[70px] md:px-0 md:justify-end md:pt-[30px] bg-[#F5F5F5]">
                     <div className="md:mr-[70px]">
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary pt-[50px] md:pt-0">Get started with easily register</h1>
-                        <p className="font-secondary font-normal text-[16px] md:text-[20px] leading-auto text-secondary/50 md:mt-[5px]">Free register and you can enjoy it</p>
+                        <p className="font-secondary font-normal text-[16px] md:text-[20px] leading-auto text-secondary/50 md:mt-[-5px]">Free register and you can enjoy it</p>
                         {/* email */}
-                        <div className="md:w-[368px] relative mt-[40px]">
+                        <div className="w-[250px] md:w-[368px] relative mt-[30px]">
                             <input onChange={handleEmail}
                                 type="email"
                                 value={email}
@@ -119,7 +119,7 @@ const Registration = () => {
                             <p className="z-[666] bg-red-100 text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{emailErr}</p>
                         </div>
                         {/* fullName */}
-                        <div className="w-[368px] relative mt-[40px]">
+                        <div className="w-[250px] md:w-[368px] relative mt-[30px]">
                             <input onChange={handleFullName}
                                 type="text"
                                 value={fullName}
@@ -129,7 +129,7 @@ const Registration = () => {
                             <p className="z-[666] bg-red-100 text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{fullNameErr}</p>
                         </div>
                         {/* password */}
-                        <div className="w-[368px] relative mt-[40px]">
+                        <div className="w-[250px] md:w-[368px] relative mt-[30px]">
                             <input onChange={handlePassword}
                                 value={password}
                                 type={show ? "text" : "password"}
@@ -146,30 +146,27 @@ const Registration = () => {
                             <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-[#F5F5F5] py-2 px-4 tracking-[1.5px]">Password</div>
                             <p className="z-[666] bg-red-100 text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{passwordErr}</p>
                         </div>
-                        <div className="relative w-[368px] mt-[30px]">
+                        <div className="relative w-[250px] md:w-[368px] mt-[25px]">
                             {
                                 loadding ?
-                                    (<div className="flex justify-center items-center mt-[-10px] md:mt-[-20px] scale-90">
-                                        (<RotatingLines
+                                    <div className="flex justify-center items-center mt-[-10px] md:mt-[-20px] scale-90">
+                                        <DNA
                                             visible={true}
                                             height="60"
-                                            width="60"
-                                            color="green"
-                                            strokeWidth="5"
-                                            animationDuration="0.75"
-                                            ariaLabel="rotating-lines-loading"
+                                            width="80"
+                                            ariaLabel="dna-loading"
                                             wrapperStyle={{}}
-                                            wrapperClass=""
-                                        />)
+                                            wrapperClass="dna-wrapper"
+                                        />
                                     </div>
-                                    ) :
+                                    :
                                     ((<button onClick={handleSignUp} className="z-[1] relative font-secondary font-semibold text-[16px] md:text-[20px] leading-auto text-white w-full bg-bg-black transition-all duration-300 rounded-[86px] py-[15px] md:py-[20px] hover:bg-gray-600 cursor-pointer">
                                         <span className="">Sign up</span>
                                         <span className="absolute top-1/6 left-[145px] bg-[#5B36F5]/20 w-[78px] h-[50px] z-[-1] blur-[10px] rounded-[50px]"></span>
                                     </button>))
                             }
                         </div>
-                        <div className="flex justify-center mt-[5px] md:mt-[15px] w-[368px]">
+                        <div className="flex justify-center mt-[5px] md:mt-[10px] w-[250px] md:w-[368px]">
                             <p className="font-primary font-normal text-[12px] md:text-[13px] leading-auto text-primary mb-[10px] md:mb-0">Already  have an account ? <Link to="/login">
                                 <span className="font-bold text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Sign In</span>
                             </Link>
@@ -178,7 +175,7 @@ const Registration = () => {
                     </div>
                 </div>
                 <div className=" md:w-1/2">
-                    <img src={registration} alt="" className="w-full h-screen object-cover" />
+                    <img src={Registration1} alt="" className="w-full h-screen object-cover" />
                 </div>
             </div>
         </div>

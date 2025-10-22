@@ -5,7 +5,7 @@ import { Link } from "react-router"
 import { FaEye, FaEyeSlash, FaLeaf } from "react-icons/fa";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { RotatingLines } from 'react-loader-spinner'
+import { DNA } from 'react-loader-spinner'
 
 const Login = () => {
     const auth = getAuth();
@@ -90,7 +90,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="">
             <div>
                 {/* toastify */}
                 <ToastContainer
@@ -107,15 +107,15 @@ const Login = () => {
                     transition={Bounce}
                 />
             </div>
-            <div className="md:flex space-y-4">
-                <div className=" md:w-1/2 flex justify-center md:justify-end pt-[50px] md:pt-[100px] bg-[#F5F5F5]">
+            <div className="md:flex">
+                <div className=" px-[70px] md:px-0 md:w-1/2 flex  md:justify-end pt-[10px] md:pt-[60px] bg-[#F5F5F5]">
                     <div className="md:mr-[174px]">
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary">Login to your account!</h1>
-                        <div className="mt-[10px] mb-[25px]">
+                        <div className="mt-[5px]">
                             <img onClick={handleGoogleSign} src={google} alt="" className="w-[170px] md:w-auto" />
                         </div>
                         {/* email */}
-                        <div className="w-[368px] relative mt-[40px]">
+                        <div className="w-[250px] md:w-[368px] relative mt-[30px]">
                             <input onChange={handleEmail}
                                 type="email"
                                 value={email}
@@ -125,7 +125,7 @@ const Login = () => {
                             <p className="absolute w-full bg-red-100 text-red-600 text-[12px] md:text-[14px] px-4 rounded-br-[8px] rounded-bl-[8px]">{emailErr}</p>
                         </div>
                         {/* password */}
-                        <div className="w-[368px] relative mt-[40px]">
+                        <div className="w-[250px] md:w-[368px] relative mt-[40px]">
                             <input onChange={handlePassword}
                                 value={password}
                                 type={show ? "text" : "password"}
@@ -142,37 +142,33 @@ const Login = () => {
                             <div className="absolute top-[-20px] left-[0px] font-secondary font-semibold text-[12px] md:text-[14px] leading-auto text-primary/70  py-3 pr-3 pl-0 tracking-[1.5px]">Password</div>
                             <p className="absolute w-full bg-red-100 text-red-600 text-[12px] md:text-[14px] px-4 rounded-br-[8px] rounded-bl-[8px]">{passwordErr}</p>
                         </div>
-                        <div className="w-[368px] mt-[40px]">
+                        <div className="w-[250px] md:w-[368px] mt-[40px]">
                             {
                                 signloadding ?
-                                    (<div className="flex justify-center items-center w-[368px]">
-                                        (<RotatingLines
+                                    <div className="flex justify-center items-center w-[368px] mt-[-10px]">
+                                        <DNA
                                             visible={true}
                                             height="60"
-                                            width="60"
-                                            color="green"
-                                            strokeWidth="5"
-                                            animationDuration="0.75"
-                                            ariaLabel="rotating-lines-loading"
+                                            width="80"
+                                            ariaLabel="dna-loading"
                                             wrapperStyle={{}}
-                                            wrapperClass=""
-                                        />)
-                                    </div>) :
-                                    (<button onClick={handleSignUp} className="z-[1] relative font-secondary font-semibold text-[16px] md:text-[20px] leading-auto text-white w-full bg-bg-black rounded-[86px] py-[10px] md:py-[20px]"> <span>Login to Continue</span>
+                                            wrapperClass="dna-wrapper"
+                                        />
+                                    </div> :
+                                    (<button onClick={handleSignUp} className="z-[1] relative font-secondary font-semibold text-[16px] md:text-[20px] leading-auto text-white w-full bg-bg-black rounded-[86px] py-[10px] md:py-[20px] cursor-pointer"> <span>Login to Continue</span>
                                         <span className="absolute top-1/7 left-[95px] bg-[#5B36F5]/20 rounded-[40px] blur-[15px] w-[180px] h-[50px] z-[-1]"></span>
                                     </button>)
                             }
                         </div>
-                        <div className=" text-center mt-[8px] md:mt-[15px] w-[368px]">
+                        <div className=" text-center mt-[8px] md:mt-[15px] w-[250px] md:w-[368px]">
                             <p className="text-[12px] md:text-[15px]">
                                 <Link to="/forgot">
                                     <span className="text-[14px] md:text-[16px] font-semibold text-green-500 hover:text-red-500 transition-all duration-300">Forgot
                                     </span>
-                                </Link>
-                                your password?
+                                </Link> your password?
                             </p>
                         </div>
-                        <div className="flex justify-center mt-[10px] w-[368px]">
+                        <div className="flex justify-center mt-[2px] w-[250px] md:w-[368px]">
                             <p className="font-primary font-normal text-[13px] leading-auto text-primary">Don’t have an account ? <Link to="/registration">
                                 <span className="font-bold text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Sign Up</span>
                             </Link></p>

@@ -1,10 +1,11 @@
 import { use, useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
-
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 const ForgotPassword = () => {
   const auth = getAuth();
+  const navigate = useNavigate()
   // varibale for email
   const [email, setEmail] = useState("")
   const [emailErr, setEmailErr] = useState("")
@@ -29,8 +30,12 @@ const ForgotPassword = () => {
       // sent reset password to your email, check it
       sendPasswordResetEmail(auth, email)
         .then((user) => {
+          toast.success("Check your Email & Set a new Password.")
           // success here
           console.log(user);
+          setTimeout(() => {
+            navigate("/login")
+          }, 5000)
 
         })
         .catch((error) => {
@@ -42,6 +47,19 @@ const ForgotPassword = () => {
   }
   return (
     <div className='bg-gray-600 w-full h-screen flex justify-center items-center'>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
       <div className='relative bg-white py-[50px] px-[25px] md:px-[100px] rounded-[10px] '>
         <h2 className='text-2xl md:text-3xl text-primary font-bold font-primary capitalize'>forgot password</h2>
         <input type="email"
