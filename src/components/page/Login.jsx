@@ -6,8 +6,13 @@ import { FaEye, FaEyeSlash, FaLeaf } from "react-icons/fa";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { DNA } from 'react-loader-spinner'
+import { useDispatch, useSelector } from "react-redux";
+import { userInfo } from "../../slices/counterSlice";
 
 const Login = () => {
+    const dispatch = useDispatch()
+    // const Data =  useSelector((state.userInfo.value))
+    // const [verify, setVerify] = useState(false)
     const navigate = useNavigate()
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
@@ -58,6 +63,7 @@ const Login = () => {
                     //toastify massage
                     toast.success("Login successfully Done.")
                     //duration
+                    dispatch(userInfo(user.user))
                     setTimeout(() => {
                         // finally go to the next page
                           navigate("/inner")

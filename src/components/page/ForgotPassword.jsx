@@ -9,6 +9,7 @@ const ForgotPassword = () => {
   // varibale for email
   const [email, setEmail] = useState("")
   const [emailErr, setEmailErr] = useState("")
+
   // handle email function
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -47,6 +48,7 @@ const ForgotPassword = () => {
     }
   }
   return (
+    <>
     <div className='bg-gray-600 w-full h-screen flex justify-center items-center'>
       <ToastContainer
         position="top-right"
@@ -82,6 +84,8 @@ const ForgotPassword = () => {
         </div>
       </div>
     </div>
+   
+    </>
   )
 }
 

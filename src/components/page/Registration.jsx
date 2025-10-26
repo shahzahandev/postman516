@@ -63,6 +63,7 @@ const Registration = () => {
             createUserWithEmailAndPassword(auth, email, password)
                 .then((user) => {
                     sendEmailVerification(auth.currentUser)
+                    console.log(user);
                     // Sign up And toast massege will show, User name with full name   
                     toast.success("Congraculation, " + fullName + " Your registration successfully Done. Verify your email.")
                     // After 4 second it will go to the Login page.
@@ -75,6 +76,7 @@ const Registration = () => {
                 //  if show some error here
                 .catch((error) => {
                     const errorCode = error.code;
+                    console.log(errorCode);
                     // err toastify massage
                     toast.error("This Email is already-in-use. Try another.")
                     setEmailErr("Sorry, This Email is already-in-use. Try Another.")

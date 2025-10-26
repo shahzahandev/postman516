@@ -5,7 +5,7 @@ import Login from "./components/page/Login";
 import firebaseConfig from "./components/page/firebase/firebaseConfig";
 import ForgotPassword from "./components/page/ForgotPassword";
 import Home from "./components/page/Home";
-import Inner from "./components/Inner";
+import Inner from "./components/page/Inner";
 
 function App() {
   const router = createBrowserRouter([
