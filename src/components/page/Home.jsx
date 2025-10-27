@@ -21,7 +21,6 @@ const Home = () => {
             </div> */}
             
             <div className='bg-linear-to-r/srgb from-[#f36481] to-[hsl(18,80%,67%)] py-[20px] md:py-[30px] px-[30px] md:px-[80px] rounded-[10px] text-center border-4 border-[#e39b9b]'>
-                <img src="" alt="" />
                 <h1 className='font-third font-bold text-2xl md:text-4xl text-primary capitalize '>postman</h1>
                 <h2 className='text-[12px] md:text-[14px] font-third capitalize font-medium text-primary  tracking-tight md:mt-[10px]'>a chating application by <span className='font-bold text-gray-700 tracking-normal'>Siraj</span></h2>
                 <Link to="/">

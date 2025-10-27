@@ -11,8 +11,6 @@ import { userInfo } from "../../slices/counterSlice";
 
 const Login = () => {
     const dispatch = useDispatch()
-    // const Data =  useSelector((state.userInfo.value))
-    // const [verify, setVerify] = useState(false)
     const navigate = useNavigate()
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
@@ -37,9 +35,8 @@ const Login = () => {
     }
     // handle SignUp for all activity
     const handleSignUp = () => {
-        console.log(email);
-        console.log(password);
-
+        // console.log(email);
+        // console.log(password);
         if (!email) {
             // for empty massage
             setEmailErr("Must Required you email Address.")
@@ -59,14 +56,15 @@ const Login = () => {
             signInWithEmailAndPassword(auth, email, password)
                 .then((user) => {
                     //success here
-                    console.log(user);
+                    // console.log(user);
                     //toastify massage
                     toast.success("Login successfully Done.")
                     //duration
                     dispatch(userInfo(user.user))
+                    localStorage.setItem("UserInfo", JSON.stringify(user))
                     setTimeout(() => {
                         // finally go to the next page
-                          navigate("/inner")
+                        navigate("/inner")
                         //loadder false
                         setSignloadding(false)
                     }, 3000);
@@ -75,24 +73,24 @@ const Login = () => {
                 .catch((error) => {
                     //error massage here
                     const errorCode = error.code;
-                    console.log(errorCode);
+                    // console.log(errorCode);
                     // err toastify massage
                     toast.error("Please, Provite right Email & Password.")
                     setSignloadding(false)
                 });
         }
-
     }
+
     //Sign Up with Google
     const handleGoogleSign = () => {
         signInWithPopup(auth, provider)
             .then((user) => {
                 //success here
-                console.log(user);
+                // console.log(user);
             }).catch((error) => {
                 // Handle Errors here.
                 const errorCode = error.code;
-                console.log(errorCode);
+                // console.log(errorCode);
             });
     }
 
@@ -138,7 +136,6 @@ const Login = () => {
                                 type={show ? "text" : "password"}
                                 placeholder="Enter Your Password."
                                 className=" w-full pt-[26px] pb-[15px] pl-[0px] pr-[66px] font-secondary font-semibold text-primary text-[16px] md:text-[20px] leading-auto  border-b-2 border-secondary/30 outline-none" />
-
                             <div onClick={() => setShow(!show)} className="absolute top-[38%] md:top-[38%] right-[20px] text-[20px] md:text-2xl">
                                 {
                                     show ?
