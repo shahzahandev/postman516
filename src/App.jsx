@@ -27,12 +27,13 @@ function App() {
     },
     {
       path: "/inner",
-      element: <Inner></Inner>
+      element: <Inner/>
     },
     {
       path: "/goback",
       element: <Login></Login>
     },
+    
   ]);
 
   return (

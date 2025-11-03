@@ -1,42 +1,74 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
+import InnerSlider from './InnerSlider'
+import GroupsList from './UserInfo/GroupsList'
+import Friends from './UserInfo/Friends'
+import UserList from './UserInfo/UserList'
+import FriendRequest from './UserInfo/FriendRequest'
+import MyGroup from './UserInfo/MyGroup'
+import BlockedUsers from './UserInfo/BlockedUsers'
 
 const Inner = () => {
     const auth = getAuth()
+    const navigate = useNavigate()
     const data = useSelector((state) => state.userInfo.value)
-    const [verify, setVerify] = useState()
+    const [verify, setVerify] = useState(false)
+    const [loadding, setLoadding] = useState(true)
 
     onAuthStateChanged(auth, (user) => {
         if (user.emailVerified) {
             setVerify(true)
             console.log(user);
         }
+        setLoadding(false)
     });
-    // useEffect(() =>{
-    //     if(data.emailVerified){
-    //         setVerify(true)
-    //     }
-    // }, [])
+
+    if (loadding) {
+        return null
+    }
+
+    if (!data) {
+        navigate("/login")
+    }
+    // useEffect(() => {
+    //  if(data){
+    //     navigate ("/")
+    // }
+    // })
 
     return (
         <>
             {
                 verify ?
-                    <div className='w-full h-screen bg-gray-600 flex justify-center items-center'>
-                        <div>
-                            <div className='text-center p-[30px] md:p-[50px] bg-gray-500 w-[400px] md:w-[800px] rounded-[5px]'>
-                                <h2 className='font-third font-bold text-[20px] w-[280px] mx-auto md:w-auto md:text-4xl leading-[-2] tracking-tight  text-primary'>This Project is Under Construction.</h2>
-                                <span className='font-third font-bold text-secondary text-[18px] md:text-3xl capitalize'>pleace, wait few days...</span>
-                                <div className=' mt-[20px] md:mt-[50px] flex justify-center space-x-3 md:space-x-10 items-center'>
-                                    <Link to="/"> <button className='bg-primary text-white font-semibold md:text-2xl  px-[20px] md:px-[50px] py-[8px] md:py-[15px] rounded-[10px] cursor-pointer transition-all duration-300 capitalize hover:bg-secondary'>home</button></Link>
-                                    <Link to="/registration"> <button className='bg-primary text-white font-semibold md:text-2xl  px-[20px] md:px-[50px] py-[8px] md:py-[15px] rounded-[10px] cursor-pointer transition-all duration-300 capitalize hover:bg-secondary'>registration</button></Link>
-                                    <Link to="/login"> <button className='bg-primary text-white font-semibold md:text-2xl  px-[20px] md:px-[50px] py-[8px] md:py-[15px] rounded-[10px] cursor-pointer transition-all duration-300 capitalize hover:bg-secondary'>login</button></Link>
+                    <div className='flex mt-[35px] space-x-5'>
+                        <InnerSlider></InnerSlider>
+                        <div className='flex ml-[43px] space-x-10'>
+                            <div className='w-[427px] h-[463px] '>
+                                <GroupsList></GroupsList>
+                                <div className='mt-[50px]'>
+                                 <FriendRequest></FriendRequest>
                                 </div>
                             </div>
+                            <div className='w-[364px] h-[463px]'>
+                                <Friends></Friends>
+                                <div className='mt-[50px]'>
+                                    <MyGroup></MyGroup>
+                                </div>
+                            </div>
+                            <div className='w-[364px] '>
+                                <div className='overflow-y-scroll h-[430px]'>
+                                    <UserList></UserList>
+                                </div>
+                              
+                              <div className='overflow-y-scroll h-[440px] mt-[50px]'>
+                                <BlockedUsers></BlockedUsers>
+                              </div>
+                            </div>
                         </div>
-                    </div> :
+                    </div>
+                    :
                     <div className='flex justify-center  items-center bg-gray-600 w-full h-screen'>
                         <div className='bg-red-200 px-[80px] py-[50px] rounded-2xl text-center w-[800px]'>
                             <h2 className='text-4xl text-primary font-bold mb-[20px]'> Please, Verify your email. </h2>
