@@ -7,8 +7,8 @@ import { TiPlus } from "react-icons/ti";
 
 const UserList = () => {
     return (
-        <div>
-            <div className='py-2 px-10 shadow-[0px_4px_4px_0px] shadow-[#000000]/50  rounded-[20px]'>
+        <div className="shadow-[0px_4px_4px_0px] shadow-[#000000]/50  rounded-[20px]">
+            <div className='py-2 px-10 '>
                 {/* heading */}
                 <div className=' flex justify-between items-center'>
                     <h2 className='font-third font-semibold text-[20px] leading-auto text-secondary'>User List</h2>
@@ -82,7 +82,6 @@ const UserList = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     )
