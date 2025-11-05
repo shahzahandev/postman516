@@ -8,7 +8,7 @@ import request5 from "../../../assets/friendrequest5.png"
 const Friends = () => {
   return (
     <div>
-          <div className='py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25'>
+          <div className='py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll'>
                 {/* heading */}
                 <div className='flex justify-between items-center'>
                     <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Friends</h2>
@@ -16,6 +16,18 @@ const Friends = () => {
                 </div>
         
                <div className=''> 
+                  <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3  px-[5px]'>
+                    <div className='flex justify-between items-center space-x-[14px]'>
+                        <img src={request2} alt="" className="size-12 md:size-auto"/>
+                        <div className='flex flex-col'>
+                            <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Swathi</h2>
+                            <h3 className='font-third font-medium text-[10px] md:text-[12px] text-[#4D4D4D]/75'>Dinner?</h3>
+                        </div>
+                    </div>
+                    <div>
+                      <p className='font-third font-medium text-[8px] md:text-[10px] text-secondary/50'>Today, 8:56pm</p>
+                    </div>
+                </div>
                  <div className='flex justify-between items-center mt-[10px] md:mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px]'>
                     <div className='flex justify-between items-center space-x-[14px]'>
                         <img src={request1} alt="" className="size-12 md:size-auto"/>
@@ -50,6 +62,18 @@ const Friends = () => {
                     </div>
                     <div>
                         <p className='font-third font-medium text-[8px] md:text-[10px] text-secondary/50'>Today, 8:56pm</p>
+                    </div>
+                </div>
+                  <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3  px-[5px]'>
+                    <div className='flex justify-between items-center space-x-[14px]'>
+                        <img src={request2} alt="" className="size-12 md:size-auto"/>
+                        <div className='flex flex-col'>
+                            <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Swathi</h2>
+                            <h3 className='font-third font-medium text-[10px] md:text-[12px] text-[#4D4D4D]/75'>Dinner?</h3>
+                        </div>
+                    </div>
+                    <div>
+                      <p className='font-third font-medium text-[8px] md:text-[10px] text-secondary/50'>Today, 8:56pm</p>
                     </div>
                 </div>
                    <div className='flex justify-between items-center mt-[18px]  pb-3  px-[5px]'>
