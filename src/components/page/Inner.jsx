@@ -42,27 +42,27 @@ const Inner = () => {
         <>
             {
                 verify ?
-                    <div className='flex mt-4 md:mt-[35px] space-x-5 overflow-x-hidden'>
+                    <div className='flex mt-4 md:mt-[35px] space-x-5'>
                         <InnerSlider></InnerSlider>
                         <div className='flex flex-col md:flex-row ml-30 md:ml-[280px] space-x-10'>
-                            <div className='flex flex-col w-[260px] md:w-[427px] h-[463px] '>
+                            <div className='flex flex-col w-[300px] md:w-[427px] h-[463px] '>
                                 <GroupsList></GroupsList>
                                 <div className='mt-[20px] md:mt-[50px]'>
                                  <FriendRequest></FriendRequest>
                                 </div>
                             </div>
-                            <div className='w-[260px] md:w-[364px] h-[463px] mt-90 md:mt-0'>
+                            <div className='w-[300px] md:w-[364px] h-[463px] mt-45 md:mt-0'>
                                 <Friends></Friends>
-                                <div className='mt-[50px]'>
+                                <div className='mt-[20px]'>
                                     <MyGroup></MyGroup>
                                 </div>
                             </div>
-                            <div className='w-[260px] md:w-[364px] '>
-                                <div className='overflow-y-scroll h-[430px] mt-130 md:mt-0'>
+                            <div className='w-[300px] md:w-[364px] '>
+                                <div className='overflow-y-scroll h-[430px] mt-75 md:mt-0'>
                                     <UserList></UserList>
                                 </div>
                               
-                              <div className='overflow-y-scroll h-[440px] mt-[50px]'>
+                              <div className='overflow-y-scroll h-[440px] mt-[30px]'>
                                 <BlockedUsers></BlockedUsers>
                               </div>
                             </div>

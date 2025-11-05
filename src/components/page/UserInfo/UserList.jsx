@@ -8,19 +8,19 @@ import { TiPlus } from "react-icons/ti";
 const UserList = () => {
     return (
         <div className="shadow-[0px_4px_4px_0px] shadow-[#000000]/50  rounded-[20px]">
-            <div className='py-2 px-10 '>
+            <div className='py-2 px-2 md:px-10 '>
                 {/* heading */}
                 <div className=' flex justify-between items-center'>
-                    <h2 className='font-third font-semibold text-[20px] leading-auto text-secondary'>User List</h2>
-                    <BsThreeDotsVertical className='text-2xl' />
+                    <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>User List</h2>
+                    <BsThreeDotsVertical className='md:text-2xl' />
                 </div>
 
                 <div className=''>
                     <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px]'>
                         <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request1} alt="" />
+                            <img src={request1} alt="" className="size-12 md:size-auto"/>
                             <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[14px] text-secondary'>Friends Reunion</h2>
+                                <h2 className='font-third font-semibold  text-[12px] md:text-[14px] text-secondary'>Friends Reunion</h2>
                                 <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
                             </div>
                         </div>
@@ -31,9 +31,9 @@ const UserList = () => {
                     </div>
                     <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3  px-[5px]'>
                         <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request2} alt="" />
+                            <img src={request2} alt="" className="size-12 md:size-auto"/>
                             <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[14px] text-secondary'>Friends Forever</h2>
+                                <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Friends Forever</h2>
                                 <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
                             </div>
                         </div>
@@ -44,9 +44,9 @@ const UserList = () => {
                     </div>
                     <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px]'>
                         <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request1} alt="" />
+                            <img src={request1} alt="" className="size-12 md:size-auto"/>
                             <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[14px] text-secondary'>Friends Reunion</h2>
+                                <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Friends Reunion</h2>
                                 <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
                             </div>
                         </div>
@@ -57,9 +57,9 @@ const UserList = () => {
                     </div>
                     <div className='flex justify-between items-center mt-[18px]  pb-3  px-[5px]'>
                         <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request3} alt="" />
+                            <img src={request3} alt="" className="size-12 md:size-auto"/>
                             <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[14px] text-secondary'>Crazy Cousins</h2>
+                                <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Crazy Cousins</h2>
                                 <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
                             </div>
                         </div>
@@ -70,9 +70,9 @@ const UserList = () => {
                     </div>
                     <div className='flex justify-between items-center mt-[18px] pb-3 px-[5px]'>
                         <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request1} alt="" />
+                            <img src={request1} alt="" className="size-12 md:size-auto"/>
                             <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[14px] text-secondary'>Friends Reunion</h2>
+                                <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Friends Reunion</h2>
                                 <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
                             </div>
                         </div>
