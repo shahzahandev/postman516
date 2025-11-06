@@ -5,9 +5,12 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { DNA } from 'react-loader-spinner'
+import { getDatabase, ref, set } from "firebase/database";
+
 
 const Registration = () => {
     const auth = getAuth();
+    const db = getDatabase();
     const navigate = useNavigate()
     // varibale for email
     const [email, setEmail] = useState("")
@@ -66,12 +69,17 @@ const Registration = () => {
                     console.log(user);
                     // Sign up And toast massege will show, User name with full name   
                     toast.success("Congraculation, " + fullName + " Your registration successfully Done. Verify your email.")
+                     setLoadding(false)
+                      set(ref(db, 'users/' + user.user.uid), {
+                        username: fullName,
+                        email: email,
+                    });
                     // After 4 second it will go to the Login page.
                     setTimeout(() => {
                         navigate("/login")
                         // loadding will be unActive.
-                        setLoadding(false)
                     }, 2000)
+                  
                 })
                 //  if show some error here
                 .catch((error) => {
