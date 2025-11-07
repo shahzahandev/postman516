@@ -2,7 +2,7 @@ import { use, useState } from "react"
 import registrationpage from "../../assets/regis1.png"
 import { Link, useNavigate } from "react-router"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { DNA } from 'react-loader-spinner'
 import { getDatabase, ref, set } from "firebase/database";
@@ -67,10 +67,15 @@ const Registration = () => {
                 .then((user) => {
                     sendEmailVerification(auth.currentUser)
                     console.log(user);
-                    // Sign up And toast massege will show, User name with full name   
+                    // Sign up And toast massege will show, User name with full name  
+                    updateProfile(auth.currentUser, {
+                        displayName: fullName
+                    })
+
                     toast.success("Congraculation, " + fullName + " Your registration successfully Done. Verify your email.")
-                     setLoadding(false)
-                      set(ref(db, 'users/' + user.user.uid), {
+                    setLoadding(false)
+                    
+                    set(ref(db, 'users/' + user.user.uid), {
                         username: fullName,
                         email: email,
                     });
@@ -79,7 +84,7 @@ const Registration = () => {
                         navigate("/login")
                         // loadding will be unActive.
                     }, 2000)
-                  
+
                 })
                 //  if show some error here
                 .catch((error) => {

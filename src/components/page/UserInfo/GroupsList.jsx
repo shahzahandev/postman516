@@ -6,11 +6,13 @@ import request3 from "../../../assets/friendrequest3.png"
 
 const GroupsList = () => {
   return (
-     <div className='py-2 px-3 md:px-10 shadow-[0px_4px_4px_0px] shadow-[#000000]/25  rounded-[20px] h-[451px] overflow-y-scroll pt-[60px] md:pt-[100px]'>
+     <div className='py-2 px-3 md:px-10 shadow-[0px_4px_4px_0px] shadow-[#000000]/25  rounded-[20px] h-[451px] overflow-y-scroll pt-[10px] md:pt-[20px]'>
             {/* heading */}
-            <div className='flex justify-between items-center'>
+            <div className=''>
+                <div className='flex justify-between items-center'>
                 <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Groups List</h2>
                 <BsThreeDotsVertical  className='md:text-2xl'/>
+            </div>
             </div>
     
            <div className=''> 

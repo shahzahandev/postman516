@@ -3,25 +3,36 @@ import request1 from "../../../assets/friendrequest1.png"
 import request2 from "../../../assets/friendrequest2.png"
 import request3 from "../../../assets/friendrequest3.png"
 import { TiPlus } from "react-icons/ti";
-import { getDatabase, onValue, ref } from "firebase/database";
+import { getDatabase, onValue, ref, set } from "firebase/database";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 
 const UserList = () => {
+    const data = useSelector((Selector) => (Selector.userInfo.value.user))
     const db = getDatabase();
-    // const [userList, setUserList] = useState()
+    const [userList, setUserList] = useState([])
 
-    // const userRef = ref(db, "users");
-    // useEffect(() => {
-    //     onValue(userRef, (snapshot) => {
-    //         let arr = []
-    //         snapshot.forEach((items) => {
-    //             arr.push(items.val())
-    //         })
-    //         setUserList(arr);
-    //     })
-    // }, [])
+    useEffect(() => {
+        const userRef = ref(db, "users");
+        onValue(userRef, (snapshot) => {
+            let arr = []
+            snapshot.forEach((items) => {
+                if(data.uid !== items.key){
+                  arr.push(items.val())
+                }  
+            })
+            setUserList(arr);
+        })
+    }, [])
 
+
+    const handleSendRequest = (requestInfo) => {
+        set(ref(db, "Friend Request"),{
+            senderName : data.displayName,
+            receiverName : requestInfo.username,
+        })     
+    }
 
 
     return (
@@ -35,85 +46,23 @@ const UserList = () => {
 
                 <div className=''>
 
-                   <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3  px-[5px]'>
+                    {
+                       userList.map((user) => (
+                         <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3  px-[5px]'>
                                 <div className='flex justify-between items-center space-x-[14px]'>
                                     <img src={request2} alt="" className="size-12 md:size-auto" />
                                     <div className='flex flex-col'>
-                                        <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'></h2>
-                                        <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'></h3>
+                                        <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>{user.username}</h2>
+                                        <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>{user.email}</h3>
                                     </div>
                                 </div>
                                 <div>
-                                    <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" ><TiPlus className="text-white" />
+                                    <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" ><TiPlus className="text-white"  onClick={()=> handleSendRequest(user)} />
                                     </button>
                                 </div>
-                            </div>
-
-                     <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px]'>
-                        <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request1} alt="" className="size-12 md:size-auto"/>
-                            <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Friends Reunion</h2>
-                                <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" ><TiPlus className="text-white" />
-                            </button>
-                        </div>
                     </div>
-                    <div className='flex justify-between items-center mt-[18px]  pb-3  px-[5px]'>
-                        <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request3} alt="" className="size-12 md:size-auto"/>
-                            <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Crazy Cousins</h2>
-                                <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" ><TiPlus className="text-white" />
-                            </button>
-                        </div>
-                    </div>
-                       <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px]'>
-                        <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request1} alt="" className="size-12 md:size-auto"/>
-                            <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold  text-[12px] md:text-[14px] text-secondary'>Friends Reunion</h2>
-                                <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" ><TiPlus className="text-white" />
-                            </button>
-                        </div>
-                    </div>
-                    <div className='flex justify-between items-center mt-[18px] pb-3 px-[5px]'>
-                        <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request1} alt="" className="size-12 md:size-auto"/>
-                            <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Friends Reunion</h2>
-                                <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" ><TiPlus className="text-white" />
-                            </button>
-                        </div>
-                    </div>
-                       <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px]'>
-                        <div className='flex justify-between items-center space-x-[14px]'>
-                            <img src={request1} alt="" className="size-12 md:size-auto"/>
-                            <div className='flex flex-col'>
-                                <h2 className='font-third font-semibold  text-[12px] md:text-[14px] text-secondary'>Friends Reunion</h2>
-                                <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" ><TiPlus className="text-white" />
-                            </button>
-                        </div>
-                    </div>
+                       ))
+                    }
                 </div>
             </div>
         </div>
