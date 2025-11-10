@@ -74,7 +74,7 @@ const Registration = () => {
 
                     toast.success("Congraculation, " + fullName + " Your registration successfully Done. Verify your email.")
                     setLoadding(false)
-                    
+
                     set(ref(db, 'users/' + user.user.uid), {
                         username: fullName,
                         email: email,

@@ -40,7 +40,7 @@ const Inner = () => {
         <>
             {
                 verify ?
-                    <div className='flex mt-4 md:mt-[35px] space-x-5 overflow-x-hidden'>
+                    <div className='bg-white flex pt-4 md:pt-[35px] space-x-5 overflow-x-hidden'>
                         <InnerSlider></InnerSlider>
                         <div className='flex flex-col md:flex-row ml-25 md:ml-[280px] space-x-10'>
                             <div className='flex flex-col w-[310px] md:w-[427px]'>

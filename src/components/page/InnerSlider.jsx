@@ -7,20 +7,16 @@ import { useNavigate } from "react-router";
 import { getAuth, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { userInfo } from "../../slices/counterSlice";
-import { useState } from "react";
-
 
 const InnerSlider = () => {
     const data = useSelector((selector) => (selector.userInfo.value.user)
-    )    
+    )
     const auth = getAuth();
     const navigate = useNavigate()
     const dispatch = useDispatch()
   
-
     const handleSingOut = () => {
         signOut(auth).then(() => {
-            //   dispatch(userInfo(null))
             // Removed localStorage
             localStorage.removeItem("UserInfo")
             dispatch(userInfo(null))
@@ -30,7 +26,7 @@ const InnerSlider = () => {
                 navigate("/login")
                 console.log("log Out");
                 
-            }, 1000)
+            }, 1500)
         }).catch((error) => {
             // An error happened.
         });
@@ -39,7 +35,7 @@ const InnerSlider = () => {
 
     return (
         <>
-            <div className='fixed md:absolute bg-primary md:bg-secondary ml-2  md:ml-[32px] w-[80px] md:w-[186px] h-full md:h-[954px] rounded-[20px]'>
+            <div className='fixed md:absolute bg-primary md:bg-primary ml-2  md:ml-[32px] w-[80px] md:w-[186px] h-full md:h-[954px] rounded-[20px]'>
                 <div className='flex justify-center flex-col items-center pt-5 md:pt-[38px]'>
                     <img src={innerimag} alt="" className="size-15 md:size-auto" />
                     <p className="relative font-bold text-[#bae1e8] md:text-[#bfc1c1]  mt-2 font-third text-[10px] md:text-[16px] text-center">{data?.displayName}</p>

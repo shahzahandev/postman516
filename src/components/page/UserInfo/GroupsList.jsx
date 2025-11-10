@@ -27,57 +27,8 @@ const GroupsList = () => {
                 <div>
                     <button className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-2 md:px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-green-700'>Join</button>
                 </div>
-            </div>
-              <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3  md:px-[5px]'>
-                <div className='flex justify-between items-center space-x-[14px]'>
-                    <img src={request2} alt="" className='size-12 md:size-auto'/>
-                    <div className='flex flex-col'>
-                        <h2 className='font-third font-semibold text-[12px] md:text-[18px] text-secondary'>Friends Reunion</h2>
-                        <h3 className='font-third font-medium text-[11px] md:text-[14px] text-[#4D4D4D]/75'>How are you?</h3>
-                    </div>
-                </div>
-                <div>
-                    <button className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-2 md:px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-green-700'>Join</button>
-                </div>
-            </div>
-              <div className='flex justify-between items-center mt-[18px] pb-3  md:px-[5px]'>
-                <div className='flex justify-between items-center space-x-[14px]'>
-                    <img src={request3} alt="" className='size-12 md:size-auto'/>
-                    <div className='flex flex-col'>
-                        <h2 className='font-third font-semibold text-[12px] md:text-[18px] text-secondary'>Friends Reunion</h2>
-                        <h3 className='font-third font-medium text-[11px] md:text-[14px] text-[#4D4D4D]/75'>How are you?</h3>
-                    </div>
-                </div>
-                <div>
-                    <button className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-2 md:px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-green-700'>Join</button>
-                </div>
-            </div>
-               <div className='flex justify-between items-center mt-[18px] pb-3  md:px-[5px]'>
-                <div className='flex justify-between items-center space-x-[14px]'>
-                    <img src={request3} alt="" className='size-12 md:size-auto'/>
-                    <div className='flex flex-col'>
-                        <h2 className='font-third font-semibold text-[12px] md:text-[18px] text-secondary'>Friends Reunion</h2>
-                        <h3 className='font-third font-medium text-[11px] md:text-[14px] text-[#4D4D4D]/75'>How are you?</h3>
-                    </div>
-                </div>
-                <div>
-                    <button className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-2 md:px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-green-700'>Join</button>
-                </div>
-            </div>
-              <div className='flex justify-between items-center mt-[18px] pb-3  md:px-[5px]'>
-                <div className='flex justify-between items-center space-x-[14px]'>
-                    <img src={request3} alt="" className='size-12 md:size-auto'/>
-                    <div className='flex flex-col'>
-                        <h2 className='font-third font-semibold text-[12px] md:text-[18px] text-secondary'>Friends Reunion</h2>
-                        <h3 className='font-third font-medium text-[11px] md:text-[14px] text-[#4D4D4D]/75'>How are you?</h3>
-                    </div>
-                </div>
-                <div>
-                    <button className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-2 md:px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-green-700'>Join</button>
-                </div>
-            </div>
+            </div>    
            </div>
-        
         </div>
   )
 }
