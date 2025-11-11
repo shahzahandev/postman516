@@ -1,24 +1,8 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import request3 from "../../../assets/friendrequest3.png"
-import { getDatabase, onValue, ref } from "firebase/database";
-import { useEffect, useState } from "react";
+
 
 const Friends = () => {
-   const db = getDatabase()
-   const [acceptedlist, setAcceptedlist] = useState([])
-
-     useEffect(() => {
-          const userRef = ref(db,  "AcceptedFriend/");
-          onValue(userRef, (snapshot) => {
-              let arr = []
-              snapshot.forEach((items) => {
-                  // console.log(items.key);
-                  arr.push(items.val())
-              })
-              setAcceptedlist(arr);
-          })
-      }, [])
-// console.log(acceptedlist);
 
   return (
     <div>
@@ -28,13 +12,11 @@ const Friends = () => {
                     <BsThreeDotsVertical  className='md:text-2xl'/>
                 </div>
                <div className=''> 
-                {
-                    acceptedlist.map((user) => (
                           <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3  px-[5px]'>
                     <div className='flex justify-between items-center space-x-[14px]'>
                         <img src={request3} alt="" className="size-12 md:size-auto"/>
                         <div className='flex flex-col'>
-                            <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>{user.newFriend}</h2>
+                            <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>siraj</h2>
                             <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Say something...</h3>
                         </div>
                     </div>
@@ -42,8 +24,6 @@ const Friends = () => {
                       <p className='font-third font-medium text-[8px] md:text-[10px] text-secondary/50'>Start Chating</p>
                     </div>
                 </div>
-                    ))
-                }
                </div>
             </div>
     </div>

@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { userInfo } from "../../slices/counterSlice";
 
 const InnerSlider = () => {
-    const data = useSelector((selector) => (selector.userInfo.value.user)
+    const data = useSelector((selector) => (selector?.userInfo?.value)
     )
     const auth = getAuth();
     const navigate = useNavigate()
@@ -38,7 +38,7 @@ const InnerSlider = () => {
             <div className='fixed md:absolute bg-primary md:bg-primary ml-2  md:ml-[32px] w-[80px] md:w-[186px] h-full md:h-[954px] rounded-[20px]'>
                 <div className='flex justify-center flex-col items-center pt-5 md:pt-[38px]'>
                     <img src={innerimag} alt="" className="size-15 md:size-auto" />
-                    <p className="relative font-bold text-[#bae1e8] md:text-[#bfc1c1]  mt-2 font-third text-[10px] md:text-[16px] text-center">{data?.displayName}</p>
+                    <p className="relative font-bold text-[#bae1e8] md:text-[#bfc1c1]  mt-2 font-third text-[10px] md:text-[16px] text-center">{data?.displayName || data?.user?.displayName}</p>
                     <span className=" w-[13px] h-[12px] rounded-[50%] bg-green-500 shadow-[0px_0px_7px_0px] shadow-[#03d24f]"></span>
                     
                 </div>

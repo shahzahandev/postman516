@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const UserList = () => {
-    const data = useSelector((Selector) => (Selector.userInfo.value.user))
+    const data = useSelector((Selector) => (Selector?.userInfo?.value?.user))
     const db = getDatabase();
     const [userList, setUserList] = useState([])
-    const [send, setSend] = useState(true)
+
 
     // All of registrated person will be add here as a user list except Login person
     useEffect(() => {
@@ -17,8 +17,8 @@ const UserList = () => {
         onValue(userRef, (snapshot) => {
             let arr = []
             snapshot.forEach((items) => {
-                if (data?.uid !== items.key) {
-                    arr.push(items.val())
+                if (data?.uid !== items?.key) {
+                    arr.push(items?.val())
                 }
             })
             setUserList(arr);
@@ -27,9 +27,9 @@ const UserList = () => {
 
     // When you send a friend request
     const handleSendRequest = (requestInfo) => {
-        set(ref(db, "FriendRequest/" + requestInfo.username), {
+        set(ref(db, "FriendRequest/" + requestInfo?.username), {
             senderName: data?.displayName,
-            reciverName: requestInfo.username,
+            reciverName: requestInfo?.username,
         })
     }
 
