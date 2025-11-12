@@ -16,7 +16,7 @@ const Friends = () => {
                     <div className='flex justify-between items-center space-x-[14px]'>
                         <img src={request3} alt="" className="size-12 md:size-auto"/>
                         <div className='flex flex-col'>
-                            <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>siraj</h2>
+                            <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>Kaisar</h2>
                             <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Say something...</h3>
                         </div>
                     </div>

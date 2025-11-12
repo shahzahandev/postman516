@@ -1,7 +1,33 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import request2 from "../../../assets/friendrequest2.png"
+import { useEffect, useState } from "react";
+import {getDatabase, onValue, ref } from "firebase/database";
+import { useSelector } from "react-redux";
 
 const FriendRequest = () => {
+
+const data = useSelector((Selector) => (Selector?.userInfo?.value?.user))
+// console.log(data.uid);
+const db = getDatabase()
+const [friendRequestList, setFriendRequestList] = useState([])
+
+useEffect(() => {
+      const requestRef = ref(db, "Friend-Request/");
+           onValue(requestRef, (snapshot) => {
+               let arr = []
+               snapshot.forEach((items) => {
+                if(data?.uid == items?.val()?.receverId){
+                  arr?.push(items?.val())
+                }
+                // console.log(items.val(), "value is here");
+                //   console.log(items.val(), "Items");                  
+               })
+               setFriendRequestList(arr);
+           })
+}, [])
+
+// console.log(friendRequestList);
+// console.log(data.uid, "login user id is here");
 
 
     return (
@@ -12,11 +38,13 @@ const FriendRequest = () => {
                 <BsThreeDotsVertical className='md:text-2xl' />
             </div>
             <div className=''>
-                        <div className='flex justify-between items-center mt-[10px] md:mt-[18px] border-b-2 border-bg-black/50 pb-3 md:px-[20px]'>
+                      {
+                        friendRequestList.map((items) => (
+                              <div className='flex justify-between items-center mt-[10px] md:mt-[18px] border-b-2 border-bg-black/50 pb-3 md:px-[20px]'>
                             <div className='flex justify-between items-center space-x-[14px]'>
                                 <img src={request2} alt="" className="size-12 md:size-auto" />
                                 <div className='flex flex-col'>
-                                    <h2 className='font-third font-semibold text-[12px] md:text-[18px] text-secondary'>siraj</h2>
+                                    <h2 className='font-third font-semibold text-[12px] md:text-[18px] text-secondary'>{items?.senderName}</h2>
                                      <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Send a Friend Request</h3>
                                 </div>
                             </div>
@@ -24,6 +52,8 @@ const FriendRequest = () => {
                                 <button className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-green-700'>Accept</button>
                             </div>
                         </div>
+                        ))
+                      }
             </div>
         </div>
     )

@@ -182,7 +182,11 @@ const Registration = () => {
                             }
                         </div>
                         <div className="flex justify-center mt-[5px] md:mt-[10px] w-[250px] md:w-[368px]">
-                            <p className="font-primary font-normal text-[12px] md:text-[13px] leading-auto text-primary mb-[10px] md:mb-0">Already  have an account ? <Link to="/login">
+                            
+                            <p className="font-primary font-normal text-[12px] md:text-[13px] leading-auto text-primary mb-[10px] md:mb-0"> <Link to="/">
+                                <span className="font-bold text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Back Home </span>
+                            </Link>
+                                Already  have an account ? <Link to="/login">
                                 <span className="font-bold text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Sign In</span>
                             </Link>
                             </p>
