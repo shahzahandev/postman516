@@ -37,7 +37,7 @@ console.log(data);
                 <div className='flex justify-center flex-col items-center pt-5 md:pt-[38px]'>
                     <img src={innerimag} alt="" className="size-15 md:size-auto" />
                     <p className="relative font-bold text-[#bae1e8] md:text-[#bfc1c1]  mt-2 font-third text-[10px] md:text-[16px] text-center">{data?.displayName || data?.user?.displayName}</p>
-                    <p className=" text-[#bae1e8] md:text-[#bfc1c1] text-[5px] md:text-[10px] mb-[5px] md:font-semibold">{data.user.email}</p>
+                    {/* <p className=" text-[#bae1e8] md:text-[#bfc1c1] text-[5px] md:text-[10px] mb-[5px] md:font-semibold">{data.user.email}</p> */}
                     <span className=" w-[13px] h-[12px] rounded-[50%] bg-green-500 shadow-[0px_0px_7px_0px] shadow-[#03d24f]"></span>
                 </div>
                 <div className='relative'>

@@ -60,7 +60,7 @@ const Login = () => {
                     //toastify massage
                     toast.success("Login successfully Done.")
                     //duration
-                    dispatch(userInfo(user.user))
+                    dispatch(userInfo(user))
                     localStorage.setItem("UserInfo", JSON.stringify(user))
                     setTimeout(() => {
                         // finally go to the next page

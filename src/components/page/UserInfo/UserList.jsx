@@ -72,8 +72,8 @@ useEffect(() => {
                             <div>
                                 <button className="text-[20px] py-[5px] px-[4px] bg-secondary rounded-[5px] transition-all duration-300 hover:bg-green-600" >
                                     {
-                                        disableRquest.includes(data?.uid+user?.userid) ||
-                                        disableRquest.includes(user?.userid+data?.uid)
+                                        disableRquest.includes(data?.uid+user.userid) ||
+                                        disableRquest.includes(user.userid+data?.uid)
                                         ?
                                           <LuUserRoundCheck className="text-white" />
                                         :
