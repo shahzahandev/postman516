@@ -1,7 +1,7 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import request3 from "../../../assets/friendrequest3.png"
 import { useEffect, useState } from "react";
-import { getDatabase, onValue, ref } from "firebase/database";
+import { getDatabase, onValue, push, ref, remove, set } from "firebase/database";
 import { useSelector } from "react-redux";
 
 const Friends = () => {
@@ -14,15 +14,24 @@ const Friends = () => {
     const friendRef = ref(db, "Friend/");
     onValue(friendRef, (snapshot) => {
       let arr = []
-      snapshot.forEach((items) => { 
+      snapshot.forEach((items) => {
         // If user with receiver Id & sender Id, push to array.....
-        if(data?.uid == items.val().receiverId || data?.uid ==items.val().senderId){
-        arr.push(items.val())
-        } 
+        if (data?.uid == items.val().receiverId || data?.uid == items.val().senderId) {
+          arr.push({ ...items.val(), userId: items.key })
+        }
       })
       setFriendList(arr);
     })
   }, [])
+
+  const handleBlockFriend = (items) => {
+    set(push(ref(db, "Blocklist/")), {
+      ...items
+    }).then(() => {
+      //remove the old friend request collection for database....
+      remove(ref(db, "Friend/" + items.userId))
+    })
+  }
 
   return (
     <div>
@@ -42,13 +51,14 @@ const Friends = () => {
                       {
                         data?.uid == user.senderId ? user.receiverName : user.senderName
                       }
-                      </h2>
+                    </h2>
                     <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Now, your new Friend</h3>
                   </div>
                 </div>
                 <div>
-                   <button className="text-[12px] md:text-[14px] py-[2px] md:py-[4px] px-[8px]  rounded-[5px] bg-secondary text-white  font-bold transition-all duration-300 hover:bg-green-600" >Block
-                            </button>
+                  <button onClick={() => handleBlockFriend(user)}
+                    className="text-[12px] md:text-[14px] py-[2px] md:py-[4px] px-[8px]  rounded-[5px] bg-secondary text-white  font-bold transition-all duration-300 hover:bg-green-600" >Block
+                  </button>
                 </div>
               </div>
             ))
