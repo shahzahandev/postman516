@@ -26,7 +26,10 @@ const Friends = () => {
 
   const handleBlockFriend = (items) => {
     set(push(ref(db, "Blocklist/")), {
-      ...items
+      blockedBy: data?.displayName,
+      blockedById: data?.uid,
+      blockPerson: items.senderName,
+      blockPersonId: items.userId,
     }).then(() => {
       //remove the old friend request collection for database....
       remove(ref(db, "Friend/" + items.userId))
@@ -35,7 +38,7 @@ const Friends = () => {
 
   return (
     <div>
-      <div className='py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll'>
+      <div className=' bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll'>
         <div className='flex justify-between items-center'>
           <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Friends</h2>
           <BsThreeDotsVertical className='md:text-2xl' />

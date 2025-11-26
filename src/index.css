@@ -15,7 +15,9 @@
     --color-bg-black: #1E1E1E;
 }
 
-
+.layout{
+  border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
+}
 
 
 

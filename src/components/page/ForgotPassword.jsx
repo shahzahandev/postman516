@@ -49,7 +49,7 @@ const ForgotPassword = () => {
   }
   return (
     <>
-    <div className='bg-gray-600 w-full h-screen flex justify-center items-center'>
+    <div className='bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068] w-full h-screen flex justify-center items-center'>
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -63,7 +63,7 @@ const ForgotPassword = () => {
         theme="colored"
         transition={Bounce}
       />
-      <div className='relative bg-linear-to-r/srgb from-[#ec5a92] to-[hsl(18,80%,67%)] py-[50px] px-[25px] md:px-[100px] rounded-[10px] '>
+      <div className='relative bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] py-[50px] md:py-[100px] px-[25px] md:px-[150px] rounded-[10px] '>
         <h2 className='text-2xl md:text-3xl text-primary font-bold font-primary capitalize'>forgot password</h2>
         <input type="email"
           onChange={handleEmail}

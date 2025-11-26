@@ -6,6 +6,9 @@ import firebaseConfig from "./components/page/firebase/firebaseConfig";
 import ForgotPassword from "./components/page/ForgotPassword";
 import Home from "./components/page/Home";
 import Inner from "./components/page/Inner";
+import Message from "./components/page/UserInfo/Message/Message";
+import Setting from "./components/page/UserInfo/Setting/Setting";
+
 
 function App() {
   const router = createBrowserRouter([
@@ -33,6 +36,18 @@ function App() {
       path: "/goback",
       element: <Login></Login>
     },
+      {
+      path: "/msg",
+      element: <Message></Message>
+    },
+    {
+      path: "/homepage",
+      element: <Inner></Inner>
+    },
+      {
+      path: "/set",
+      element:<Setting></Setting>
+    }
     
   ]);
 

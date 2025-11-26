@@ -36,7 +36,7 @@ const FriendRequest = () => {
     }
 
     return (
-        <div className='py-2 px-3  rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll'>
+        <div className='py-2 px-3  rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2]'>
             <div className='flex justify-between items-center'>
                 <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Friend  Request</h2>
                 <BsThreeDotsVertical className='md:text-2xl' />

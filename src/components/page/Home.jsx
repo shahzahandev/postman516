@@ -16,7 +16,7 @@ const Home = () => {
     }
     return (
         <div className='bg-[url(./assets/home11.webp)] bg-center bg-cover w-full h-screen flex justify-center items-center'>
-            <div className='bg-linear-to-r/srgb from-[#ec5a92] to-[hsl(18,80%,67%)] py-[20px] md:py-[30px] px-[30px] md:px-[80px] rounded-[10px] text-center border-4 border-[#e39b9b]'>
+            <div className='bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068] py-[20px] md:py-[30px] px-[30px] md:px-[80px] rounded-[10px] text-center border-4 border-[#e39b9b]'>
                 <h1 className='font-third font-bold text-2xl md:text-4xl text-primary capitalize '>postman</h1>
                 <h2 className='text-[12px] md:text-[14px] font-third capitalize font-medium text-primary  tracking-tight md:mt-[10px]'>a chating application by <span className='font-bold text-gray-700 tracking-normal'>Siraj</span></h2>
                 <Link to="/">

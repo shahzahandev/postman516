@@ -14,7 +14,7 @@ const BlockedUsers = () => {
         onValue(blockRef, (snapshot) => {
             let arr = []
             snapshot.forEach((items) => {
-                if (data?.uid == items.val().receiverId || data?.uid == items.val().senderId) {
+                if (data?.uid == items.val().blockedById || data?.uid == items.val().blockedPersonId) {
                     arr.push({ ...items.val(), userId: items.key })
                 }
             })
@@ -23,18 +23,18 @@ const BlockedUsers = () => {
     }, [])
 
     const handleBlock = (items) => {
-        console.log("blkeock");
         set(push(ref(db, "UnBlockList/")), {
             ...items
         }).then(() => {
             remove(ref(db, "Blocklist/"))
         })
     }
+    
 
     return (
         <div>
-            <div className='py-2 px-4 md:px-10 shadow-[0px_4px_4px_0px] shadow-[#000000]/50  rounded-[20px] h-[451px] overflow-y-scroll mt-5 md:mt-10'>
-                <div className=' flex justify-between items-center'>
+            <div className='py-2 px-4 md:px-10 shadow-[0px_4px_4px_0px] shadow-[#000000]/50  rounded-[20px] h-[451px] overflow-y-scroll mt-5 md:mt-10 bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2]'>
+                <div className=' flex justify-between items-center '>
                     <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Blocked Users</h2>
                     <BsThreeDotsVertical className='md:text-2xl' />
                 </div>
@@ -46,9 +46,8 @@ const BlockedUsers = () => {
                                     <img src={request3} alt="" className="size-12 md:size-auto" />
                                     <div className='flex flex-col'>
                                         <h2 className='font-third font-semibold  text-[12px] md:text-[14px] text-secondary'>
-                                            {
-                                                data?.uid == user.senderId ? user.receiverName : user.senderName
-                                            }
+                                            {user.blockPerson}
+                                           
                                         </h2>
                                         <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Today, 2:31pm</h3>
                                     </div>

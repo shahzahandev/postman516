@@ -112,9 +112,9 @@ const Login = () => {
                     transition={Bounce}
                 />
             </div>
-            <div className="md:flex space-y-4">
-                <div className=" px-[70px] md:px-0 md:w-1/2 flex  md:justify-end pt-[10px] md:pt-[60px] bg-[#F5F5F5]">
-                    <div className="md:mr-[174px]">
+            <div className="md:flex  z-[-1]">
+                <div className=" px-[70px] md:px-0 md:w-1/2 flex md:justify-end pt-[10px] md:pt-[60px] bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068]">
+                    <div className="md:mr-[174px] z-[2]">
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary">Login to your account!</h1>
                         <div className="mt-[5px]">
                             <img onClick={handleGoogleSign} src={google} alt="" className="w-[170px] md:w-auto" />
@@ -178,6 +178,7 @@ const Login = () => {
                             </Link></p>
                         </div>
                     </div>
+                    <div className="layout absolute top-[20px] left-[150px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[600px] h-[600px] shadow-[#1a0114] shadow-2xl"></div>
                 </div>
                 <div className="md:w-1/2">
                     <img src={login} alt="" className="w-full h-screen object-cover" />
