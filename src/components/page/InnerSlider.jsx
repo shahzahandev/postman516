@@ -41,25 +41,25 @@ console.log(data);
                 </div>
                 <div className='relative'>
                     <div className='text-white relative mt-[50px] md:mt-[78px]'>
-                        <div className={`absolute right-0 left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px]  rounded-tl-[20px] rounded-bl-[20px] cursor-pointer transition-all duration-300 ${ active ==  "homepage" ? "bg-white" : "bg-transparent"} after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-[#1E1E1E] after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000] group`}>
+                        <div className={`absolute right-0 left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px]  rounded-tl-[20px] rounded-bl-[20px] cursor-pointer transition-all duration-300 ${ active ==  "homepage" ? " bg-linear-to-r/srgb from-[#ace06c] to-[hsl(174,59%,59%)]" : "bg-transparent"} after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-[#1E1E1E] after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000] group`}>
                             <Link to="/homepage">
-                                        <GoHome className='text-3xl md:text-5xl text-[#b2aaaa]' />
+                                        <GoHome className='text-3xl md:text-5xl text-white' />
                             </Link>
                         </div>
-                        <div className={`absolute top-20 md:top-30 right-0 left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px]  rounded-tl-[20px] rounded-bl-[20px] ${active == "message" ? "bg-white" : "bg-transparent"} cursor-pointer transition-all duration-300  group after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-secondary after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000]`}>
+                        <div className={`absolute top-20 md:top-30 right-0 left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px]  rounded-tl-[20px] rounded-bl-[20px] ${active == "message" ? " bg-linear-to-r/srgb from-[#ace06c] to-[hsl(174,59%,59%)]" : "bg-transparent"} cursor-pointer transition-all duration-300  group after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-secondary after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000]`}>
                         <Link to="/msg">
-                             <LuMessageCircleMore className='text-3xl md:text-5xl text-[#b2aaaa]' />
+                             <LuMessageCircleMore className='text-3xl md:text-5xl text-white' />
                         </Link>
                         </div>
-                        <div className={`absolute top-40 md:top-60 right-0 left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px]  rounded-tl-[20px] rounded-bl-[20px] ${ active == "setting" ? "bg-white" : "bg-transparent"} cursor-pointer transition-all duration-300  group after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-secondary after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000]`}>
+                        <div className={`absolute top-40 md:top-60 right-0 left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px]  rounded-tl-[20px] rounded-bl-[20px] ${ active == "setting" ? " bg-linear-to-r/srgb from-[#ace06c] to-[hsl(174,59%,59%)]" : "bg-transparent"} cursor-pointer transition-all duration-300  group after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-secondary after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000]`}>
                           <Link to="/set">
-                            <IoSettingsOutline className='text-3xl md:text-5xl text-[#b2aaaa]' />
+                            <IoSettingsOutline className='text-3xl md:text-5xl text-white' />
                           </Link>
                         </div>
                     </div>
                 </div>
-                <div className='absolute right-0 bottom-[47px] left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px] rounded-tl-[20px] rounded-bl-[20px] cursor-pointer transition-all duration-300 hover:bg-white group after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-secondary after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000]'>
-                    <ImExit onClick={handleSingOut} className='text-[#C3C3C3] text-3xl md:text-5xl group-hover:text-secondary' />
+                <div className='absolute right-0 bottom-[47px] left-4 md:left-[25px] pt-[20px] md:pt-[25px] pb-[20px] md:pb-[25px] pl-[20px] md:pl-[45px] md:pr-[70px] rounded-tl-[20px] rounded-bl-[20px] cursor-pointer transition-all duration-300 hover:bg-linear-to-r/srgb from-[#ace06c] to-[hsl(174,59%,59%)] group after:absolute after:content-[""] after:w-[8px] after:bg-primary after:md:bg-secondary after:h-full after:top-0 after:right-0 after:rounded-tl-[20px] after:rounded-bl-[20px] after:shadow-[-1px_0px_4px_0px] after:shadow-[#000000]'>
+                    <ImExit onClick={handleSingOut} className='text-white text-3xl md:text-5xl ' />
                 </div>
             </div>
         </>

@@ -113,7 +113,7 @@ const Login = () => {
                 />
             </div>
             <div className="md:flex  z-[-1]">
-                <div className=" px-[70px] md:px-0 md:w-1/2 flex md:justify-end pt-[10px] md:pt-[60px] bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068]">
+                <div className=" px-[70px] md:px-0 md:w-1/2 flex md:justify-end pt-[20px] md:pt-[60px] pb-5 md:pb-0 bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068]">
                     <div className="md:mr-[174px] z-[2]">
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary">Login to your account!</h1>
                         <div className="mt-[5px]">
@@ -127,7 +127,7 @@ const Login = () => {
                                 placeholder="Enter Your Email  Address."
                                 className=" w-full pt-[26px] pb-[15px] pl-[0] pr-[66px] font-secondary font-semibold text-primary text-[16px] md:text-[20px] leading-auto  border-b-2 border-secondary/30 outline-none" />
                             <div className="absolute top-[-20px] left-[0px] font-secondary font-semibold text-[12px] md:text-[14px] leading-auto text-primary/70  py-3 pr-3 pl-0 tracking-[1.5px]">Email Address</div>
-                            <p className="absolute w-full bg-red-100 text-red-600 text-[12px] md:text-[14px] px-4 rounded-br-[8px] rounded-bl-[8px]">{emailErr}</p>
+                            <p className="absolute w-full text-red-600 text-[12px] md:text-[14px] px-4 rounded-br-[8px] rounded-bl-[8px]">{emailErr}</p>
                         </div>
                         {/* password */}
                         <div className="w-[250px] md:w-[368px] relative mt-[40px]">
@@ -144,7 +144,7 @@ const Login = () => {
                                 }
                             </div>
                             <div className="absolute top-[-20px] left-[0px] font-secondary font-semibold text-[12px] md:text-[14px] leading-auto text-primary/70  py-3 pr-3 pl-0 tracking-[1.5px]">Password</div>
-                            <p className="absolute w-full bg-red-100 text-red-600 text-[12px] md:text-[14px] px-4 rounded-br-[8px] rounded-bl-[8px]">{passwordErr}</p>
+                            <p className="absolute w-full  text-red-600 text-[12px] md:text-[14px] px-4 rounded-br-[8px] rounded-bl-[8px]">{passwordErr}</p>
                         </div>
                         <div className="w-[250px] md:w-[368px] mt-[40px]">
                             {
@@ -178,7 +178,7 @@ const Login = () => {
                             </Link></p>
                         </div>
                     </div>
-                    <div className="layout absolute top-[20px] left-[150px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[600px] h-[600px] shadow-[#1a0114] shadow-2xl"></div>
+                    <div className="layout absolute top-2 md:top-[20px] left-[20px] md:left-[150px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[450px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
                 </div>
                 <div className="md:w-1/2">
                     <img src={login} alt="" className="w-full h-screen object-cover" />
