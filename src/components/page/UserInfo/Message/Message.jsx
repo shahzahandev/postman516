@@ -20,7 +20,7 @@ const Message = () => {
                     <div className='w-[300px] md:w-[440px]'>
                         <Friends></Friends>
                     </div>
-                    <div className='w-[300px] md:w-[727px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] px-6 py-5 rounded-[20px] '>
+                    <div className='w-[300px] md:w-[727px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] px-6 py-5 rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/50'>
                         <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px] '>
                             <div className='flex justify-between items-center space-x-[14px]'>
                                 <img src={request3} alt="" className="size-12 md:size-auto" />
