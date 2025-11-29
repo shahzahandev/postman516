@@ -167,7 +167,7 @@ const Login = () => {
                         <div className=" text-center mt-[8px] md:mt-[15px] w-[250px] md:w-[368px]">
                             <p className="text-[12px] md:text-[15px]">
                                 <Link to="/forgot">
-                                    <span className="text-[14px] md:text-[16px] font-semibold text-green-500 hover:text-red-500 transition-all duration-300">Forgot
+                                    <span className="text-[14px] md:text-[16px] font-semibold text-red-400 transition-all duration-300">Forgot
                                     </span>
                                 </Link> your password?
                             </p>
@@ -178,7 +178,7 @@ const Login = () => {
                             </Link></p>
                         </div>
                     </div>
-                    <div className="layout absolute top-2 md:top-[20px] left-[20px] md:left-[150px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[450px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
+                    <div className="layout absolute top-2 md:top-[20px] left-[20px] md:left-[150px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[440px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
                 </div>
                 <div className="md:w-1/2">
                     <img src={login} alt="" className="w-full h-screen object-cover" />

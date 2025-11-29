@@ -78,7 +78,7 @@ const Message = () => {
                                 <IoMdHappy className='text-[16px] md:text-2xl'/>
                                 </div>
                               </div>
-                                 <div className='p-3 rounded-[5px] bg-secondary'>                                         <CiLocationArrow1 className='text-white text-[16px] md:text-2xl'/>
+                                 <div className='p-4 rounded-[5px] bg-secondary'>                                         <CiLocationArrow1 className='text-white text-[16px] md:text-2xl'/>
                                  </div>
                             </div>
                       </div>

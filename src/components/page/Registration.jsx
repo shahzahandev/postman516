@@ -181,18 +181,23 @@ const Registration = () => {
                                     </button>))
                             }
                         </div>
-                        <div className="flex justify-center mt-[5px] md:mt-[10px] w-[250px] md:w-[368px]">
-                            
-                            <p className="font-primary font-normal text-[12px] md:text-[13px] leading-auto text-primary mb-[10px] md:mb-0"> <Link to="/">
-                                <span className="font-bold text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Back Home </span>
-                            </Link>
+                        <div className="flex flex-col items-center">
+                        <div className="flex justify-center mt-[5px] md:mt-[10px] w-[250px] md:w-[368px]">            
+                            <p className="font-primary font-normal text-[12px] md:text-[13px] leading-auto text-primary mb-[10px] md:mb-0">
                                 Already  have an account ? <Link to="/login">
                                 <span className="font-bold text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Sign In</span>
                             </Link>
                             </p>
                         </div>
+                           <div className="mt-[-15px]">
+                              <Link to="/">
+                                <span className="font-bold text-[12px] md:text-[16px] text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Back Home </span>
+                            </Link>
+                           </div>
+                        </div>
+                    
                     </div>
-                         <div className="layout absolute top-[35px] md:top-[10px] left-[25px] md:left-[140px]  bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[450px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
+                         <div className="layout absolute top-[20px] md:top-[10px] left-[25px] md:left-[140px]  bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[460px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
                 </div>
                 <div className=" md:w-1/2">
                     <img src={registrationpage} alt="" className="w-full h-screen object-cover" />
