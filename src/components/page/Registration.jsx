@@ -189,7 +189,7 @@ const Registration = () => {
                             </Link>
                             </p>
                         </div>
-                           <div className="mt-[-15px]">
+                           <div className="mt-[-15px] md:mt-0">
                               <Link to="/">
                                 <span className="font-bold text-[12px] md:text-[16px] text-[#EA6C00] text-center transition-all duration-200 hover:text-red-500">Back Home </span>
                             </Link>

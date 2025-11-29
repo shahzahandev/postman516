@@ -11,20 +11,22 @@ import request3 from "../../../../assets/friendrequest3.png"
 
 const Message = () => {
     return (
-        <div className='bg-linear-to-r/srgb from-[#ee9068] to-[#ec5a92] flex pt-4 md:pt-[35px] space-x-5 overflow-x-hidden'>
-            <InnerSlider active="message"></InnerSlider>
-            <div className='flex flex-col md:flex-row ml-25 md:ml-[280px] space-x-10 h-135vh'>
-                <div className='md:flex md:space-x-[50px] space-y-10'>
-                    <div className='w-[300px] md:w-[450px]'>
+        <div className='bg-linear-to-r/srgb from-[#ee9068] to-[#ec5a92] flex pt-4 md:pt-[35px] overflow-x-hidden'>
+           <div className='relative'> 
+               <InnerSlider active="message"></InnerSlider>
+           </div>
+            <div className='flex flex-col md:flex-row ml-25 md:ml-[280px]'>
+                <div className='md:flex md:space-x-[30px] space-y-5'>
+                    <div className='w-[300px] md:w-[440px]'>
                         <Friends></Friends>
                     </div>
-                    <div className='w-[300px] md:w-[627px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] px-6 py-5 rounded-[20px] '>
+                    <div className='w-[300px] md:w-[727px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] px-6 py-5 rounded-[20px] '>
                         <div className='flex justify-between items-center mt-[18px] border-b-2 border-bg-black/50 pb-3 px-[5px] '>
                             <div className='flex justify-between items-center space-x-[14px]'>
                                 <img src={request3} alt="" className="size-12 md:size-auto" />
                                 <div className='flex flex-col'>
-                                    <h2 className='font-third font-semibold text-[12px] md:text-[14px] text-secondary'>
-                                        User
+                                    <h2 className='font-third font-semibold text-[12px] md:text-[18px] text-secondary w-[120px] md:w-full'>
+                                        Mohammad Shahzahan Siraj
                                     </h2>
                                     <h3 className='font-third font-medium text-[10px] text-[#4D4D4D]/75'>Online</h3>
                                 </div>

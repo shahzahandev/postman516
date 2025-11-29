@@ -44,13 +44,13 @@ const Inner = () => {
                         <InnerSlider active="homepage"></InnerSlider>
                         <div className='flex flex-col md:flex-row ml-25 md:ml-[280px] space-x-10'>
                             <div className='flex flex-col w-[300px] md:w-[427px]'>
-                                <GroupsList></GroupsList>
+                                 <Friends></Friends>                        
                                 <div className='mt-[20px] md:mt-[40px]'>
                                  <FriendRequest></FriendRequest>
                                 </div>
                             </div>
                             <div className='w-[300px] md:w-[364px] mt-4 md:mt-0'>
-                                <Friends></Friends>
+                                <GroupsList></GroupsList>
                                 <div className=''>
                                     <MyGroup></MyGroup>
                                 </div>

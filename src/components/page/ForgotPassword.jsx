@@ -72,7 +72,7 @@ const ForgotPassword = () => {
           className="relative mt-[25px] w-auto md:w-[500px] py-[10px] md:py-[26px] pl-[52px] pr-[66px] font-secondary font-semibold text-primary bg-white text-[14px] md:text-[20px] leading-auto  border-2 border-secondary/30 rounded-[8px] outline-none" />
 
         <div className='relative'>
-          <p className="z-[666] bg-red-100 text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">
+          <p className="z-[666] text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">
             {emailErr}
           </p>
         </div>
