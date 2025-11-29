@@ -197,7 +197,7 @@ const Registration = () => {
                         </div>
                     
                     </div>
-                         <div className="layout absolute top-[20px] md:top-[10px] left-[25px] md:left-[140px]  bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[460px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
+                         <div className="layout absolute top-[20px] md:top-[10px] left-[25px] md:left-[140px]  bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[450px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
                 </div>
                 <div className=" md:w-1/2">
                     <img src={registrationpage} alt="" className="w-full h-screen object-cover" />
