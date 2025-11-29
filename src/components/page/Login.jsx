@@ -113,7 +113,7 @@ const Login = () => {
                 />
             </div>
             <div className="md:flex  z-[-1]">
-                <div className=" px-[70px] md:px-0 md:w-1/2 flex md:justify-end pt-[20px] md:pt-[60px] pb-5 md:pb-0 bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068]">
+                <div className=" px-[70px] md:px-0 md:w-1/2 flex md:justify-end pt-[20px] md:pt-[60px] pb-6 md:pb-0 bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068]">
                     <div className="md:mr-[174px] z-[2]">
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary">Login to your account!</h1>
                         <div className="mt-[5px]">

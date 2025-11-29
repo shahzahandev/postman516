@@ -119,7 +119,7 @@ const Registration = () => {
                     theme="dark"
                     transition={Bounce}
                 />
-                <div className="md:w-1/2 flex px-[70px] md:px-0 md:justify-end md:pt-[30px] pb-4 md:pb-0 bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068] z-[1]">
+                <div className="md:w-1/2 flex px-[70px] md:px-0 md:justify-end md:pt-[30px] pb-6 md:pb-0 bg-linear-to-r/srgb from-[#ec5a92] to-[#ee9068] z-[1]">
                     <div className="md:mr-[150px] z-[2]">
                         <h1 className="font-secondary font-bold text-[24px] md:text-[35px] leading-auto text-primary pt-[50px] md:pt-0">Get started with register</h1>
                         <p className="font-secondary font-normal text-[16px] md:text-[20px] leading-auto text-secondary/50 md:mt-[-5px]">Free register and you can enjoy it</p>
