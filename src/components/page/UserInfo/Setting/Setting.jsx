@@ -12,9 +12,9 @@ import { MdDelete } from "react-icons/md";
 const Setting = () => {
     return (
         <div className='relative  bg-linear-to-r/srgb from-[#ee9068] to-[#ec5a92] flex pt-4 md:pt-[35px] space-x-5 overflow-x-hidden'>
-            <div className='relative h-full'> <InnerSlider active="setting"></InnerSlider></div>
+            <div className='relative'> <InnerSlider active="setting"></InnerSlider></div>
             <div className='flex flex-col md:flex-row ml-[80px] md:ml-[250px] space-x-[50px] space-y-6 pb-25'>
-                <div className='bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] font-third font-semibold py-[26px] px-[26px] rounded-[15px] w-[300px] md:w-[600px] h-[859px] shadow-[0px_4px_4px_0px] shadow-[#000000]/50'>
+                <div className='bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c] font-third font-semibold py-[26px] px-[26px] rounded-[15px] w-[300px] md:w-[600px] h-[859px] shadow-[0px_4px_4px_0px] shadow-[#000000]/50'>
                     <div>
                         <h1 className='text-[12px] md:text-[20px] text-[#000000]'>Profile Settings</h1>
                     </div>
@@ -48,7 +48,7 @@ const Setting = () => {
                         </div>
                     </div>
                 </div>
-                      <div className='bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] font-third font-semibold py-[26px] px-[26px] rounded-[15px] w-[300px] md:w-[600px] h-[859px] shadow-[0px_4px_4px_0px] shadow-[#000000]/50'>
+                      <div className='bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c] font-third font-semibold py-[26px] px-[26px] rounded-[15px] w-[300px] md:w-[600px] h-[859px] shadow-[0px_4px_4px_0px] shadow-[#000000]/50'>
                     <div>
                         <h1 className=' text-[12px] md:text-[20px] text-[#000000]'>Account Settings</h1>
                     </div>

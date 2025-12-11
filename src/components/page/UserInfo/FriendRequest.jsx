@@ -36,7 +36,7 @@ const FriendRequest = () => {
     }
 
     return (
-        <div className='py-2 px-3  rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2]'>
+        <div className='py-2 px-3  rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c]'>
             <div className='flex justify-between items-center'>
                 <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Friend  Request</h2>
                 <BsThreeDotsVertical className='md:text-2xl' />
@@ -55,7 +55,7 @@ const FriendRequest = () => {
                                 </div>
                                 <div>
                                     <button onClick={() => handleAcceptRequest(user)}
-                                        className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-green-700'>Accept
+                                        className='font-third font-semibold text-[14px] md:text-[20px] text-[#FFFFFF] py-[2px] px-[8px] bg-secondary rounded-[10px] transition-all duration-300 cursor-pointer hover:bg-[#75a107]'>Accept
                                     </button>
                                 </div>
                             </div>

@@ -29,7 +29,7 @@ const MyGroup = () => {
 
   return (
     <div>
-         <div className='py-2 px-4 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll mt-5 md:mt-10 bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2]'>
+         <div className='py-2 px-4 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll mt-5 md:mt-10 bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c]'>
                         {/* heading */}
                         <div className='flex justify-between items-center'>
                             <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>My Groups</h2>

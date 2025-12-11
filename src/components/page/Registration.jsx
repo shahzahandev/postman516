@@ -130,7 +130,7 @@ const Registration = () => {
                                 value={email}
                                 placeholder="Enter Your Email  Address."
                                 className=" w-full py-[15px] md:py-[26px] pl-[52px] pr-[66px] font-secondary font-semibold text-primary text-[14px] md:text-[20px] leading-auto  border-2 border-secondary/30 rounded-[8px] outline-none" />
-                            <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-linear-to-r/srgb from-[#ace06c] to-[hsl(174,59%,59%)] py-2 px-4 tracking-[1.5px] rounded-[5px]">Email Address</div>
+                            <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-[#b5ee65] py-2 px-4 tracking-[1.5px] rounded-[5px]">Email Address</div>
                             <p className="z-[666] text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{emailErr}</p>
                         </div>
                         {/* fullName */}
@@ -140,7 +140,7 @@ const Registration = () => {
                                 value={fullName}
                                 placeholder="Enter Your Name Here."
                                 className=" w-full py-[15px] md:py-[26px] pl-[52px] pr-[66px] font-secondary font-semibold text-primary text-[14px] md:text-[20px] leading-auto border-2 border-secondary/30 rounded-[8px] outline-none" />
-                            <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-linear-to-r/srgb from-[#ace06c] to-[hsl(174,59%,59%)] py-2 px-4 tracking-[1.5px]">Full Name</div>
+                            <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-[#b5ee65] py-2 px-4 tracking-[1.5px]">Full Name</div>
                             <p className="z-[666] text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{fullNameErr}</p>
                         </div>
                         {/* password */}
@@ -158,7 +158,7 @@ const Registration = () => {
                                         (<FaEyeSlash onClick={() => setShow(!show)} />)
                                 }
                             </div>
-                            <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-linear-to-r/srgb from-[#ace06c] to-[hsl(174,59%,59%)] py-2 px-4 tracking-[1.5px]">Password</div>
+                            <div className="absolute top-[-20px] left-[37px] font-secondary font-semibold text-[14px] leading-auto text-primary/70 bg-[#b5ee65] py-2 px-4 tracking-[1.5px]">Password</div>
                             <p className="z-[666]  text-[12px] md:text-[14px] text-red-600 absolute md:bottom-[-21px] rounded-br-[8px] rounded-bl-[8px] left-0 pl-[55px] w-full">{passwordErr}</p>
                         </div>
                         <div className="relative w-[280px] md:w-[368px] mt-[25px]">
@@ -197,7 +197,7 @@ const Registration = () => {
                         </div>
                     
                     </div>
-                         <div className="layout absolute top-[20px] md:top-[10px] left-[25px] md:left-[140px]  bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[450px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
+                         <div className="layout absolute top-[20px] md:top-[10px] left-[25px] md:left-[140px]   bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c] z-[1] w-[350px] md:w-[600px] h-[480px] md:h-[600px] shadow-2xl shadow-[#f5e9e9]"></div>
                 </div>
                 <div className=" md:w-1/2">
                     <img src={registrationpage} alt="" className="w-full h-screen object-cover" />

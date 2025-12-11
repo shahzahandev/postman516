@@ -33,7 +33,7 @@ const BlockedUsers = () => {
 
     return (
         <div>
-            <div className='py-2 px-4 md:px-10 shadow-[0px_4px_4px_0px] shadow-[#000000]/50  rounded-[20px] h-[451px] overflow-y-scroll mt-5 md:mt-10 bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2]'>
+            <div className='py-2 px-4 md:px-10 shadow-[0px_4px_4px_0px] shadow-[#000000]/50  rounded-[20px] h-[451px] overflow-y-scroll mt-5 md:mt-10 bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c]'>
                 <div className=' flex justify-between items-center '>
                     <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Blocked Users</h2>
                     <BsThreeDotsVertical className='md:text-2xl' />
@@ -54,7 +54,7 @@ const BlockedUsers = () => {
                                 </div>
                                 <div>
                                     <button onClick={() => handleBlock(user)}
-                                        className="text-[12px] md:text-[14px] py-[2px] md:py-[4px] px-[8px]  rounded-[5px] bg-secondary text-white  font-bold transition-all duration-300 hover:bg-green-600" >Unblock
+                                        className="text-[12px] md:text-[14px] py-[2px] md:py-[4px] px-[8px]  rounded-[5px] bg-secondary text-white  font-bold transition-all duration-300 hover:bg-[#75a107]" >Unblock
                                     </button>
                                 </div>
                             </div>

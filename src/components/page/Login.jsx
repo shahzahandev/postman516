@@ -80,7 +80,6 @@ const Login = () => {
                 });
         }
     }
-
     //Sign Up with Google
     const handleGoogleSign = () => {
         signInWithPopup(auth, provider)
@@ -178,7 +177,7 @@ const Login = () => {
                             </Link></p>
                         </div>
                     </div>
-                    <div className="layout absolute top-2 md:top-[20px] left-[20px] md:left-[150px] bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] z-[1] w-[350px] md:w-[600px] h-[440px] md:h-[600px] shadow-[#1a0114] shadow-2xl"></div>
+                    <div className="layout absolute top-1 md:top-[20px] left-[20px] md:left-[150px] bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c] z-[1] w-[350px] md:w-[600px] h-[460px] md:h-[600px] shadow-2xl shadow-[#f5e9e9]"></div>
                 </div>
                 <div className="md:w-1/2">
                     <img src={login} alt="" className="w-full h-screen object-cover" />

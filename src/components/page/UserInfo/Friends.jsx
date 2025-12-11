@@ -38,7 +38,7 @@ const Friends = () => {
 
   return (
     <div>
-      <div className=' bg-linear-to-r/srgb from-[#e7ed6b] to-[#1dc4e2] py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll'>
+      <div className=' bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c] py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll'>
         <div className='flex justify-between items-center'>
           <h2 className='font-third font-semibold md:text-[20px] leading-auto text-secondary'>Friends</h2>
           <BsThreeDotsVertical className='md:text-2xl' />
@@ -60,7 +60,7 @@ const Friends = () => {
                 </div>
                 <div>
                   <button onClick={() => handleBlockFriend(user)}
-                    className="text-[12px] md:text-[14px] py-[2px] md:py-[4px] px-[8px]  rounded-[5px] bg-secondary text-white  font-bold transition-all duration-300 hover:bg-green-600" >Block
+                    className="text-[12px] md:text-[14px] py-[2px] md:py-[4px] px-[8px]  rounded-[5px] bg-secondary text-white  font-bold transition-all duration-300 hover:bg-[#75a107]" >Block
                   </button>
                 </div>
               </div>
