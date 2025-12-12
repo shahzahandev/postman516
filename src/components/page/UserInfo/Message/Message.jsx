@@ -43,14 +43,13 @@ const Message = () => {
   }
 
   return (
-    <div className='relative bg-linear-to-r/srgb from-[#ee9068] to-[#ec5a92] flex pt-4 md:pt-[35px] overflow-x-hidden'>
-      <div className='relative h-full'>
-        <InnerSlider active = "message"></InnerSlider>
+    <div className='relative bg-linear-to-r/srgb from-[#ee9068] to-[#ec5a92] flex pt-4 md:pt-[35px] overflow-y-hidden'>
+      <div className=''>
+        <InnerSlider active = "message" className="pb-6"></InnerSlider>
       </div>
-      <div className='flex flex-col md:flex-row ml-25 md:ml-[280px]'>
-        <div className='md:flex md:space-x-[30px] space-y-5'>
+        <div className='md:flex md:space-x-[30px] space-y-5 ml-25 md:ml-[280px] pb-60'>
           <div className='w-[300px] md:w-[440px]'>
-              <div className='bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c] py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] overflow-y-scroll'>
+              <div className='bg-linear-to-r/srgb from-[#b5ee65] to-[#c5f37c] py-2 px-5 md:px-[22px] rounded-[20px] shadow-[0px_4px_4px_0px] shadow-[#000000]/25 h-[451px] md:h-[700px] overflow-y-scroll'>
                 <div className='flex justify-between items-center'>
                   <h2 className='font-third font-semibold text-[12px] md:text-[20px] leading-auto text-secondary'>Send a message to your Friends</h2>
                   <BsThreeDotsVertical className='md:text-2xl' />
@@ -59,7 +58,7 @@ const Message = () => {
                   {/* User List for Message Option.It's  UserList Copy. Just one change, that is Message button----------------------*/}
                   {
                     friendListm.map((user) => (
-                      <div className='flex justify-between items-center mt-[18px]  pb-1  px-[5px]'>
+                      <div className='flex justify-between items-center mt-[18px] pb-1 px-[5px]'>
                         <div className='flex justify-between items-center space-x-[14px]'>
                           <img src={request3} alt="" className="size-12 md:size-auto" />
                           <div className='flex flex-col'>
@@ -82,14 +81,11 @@ const Message = () => {
                 </div>
               </div>
             </div>
-          <div>
-          </div>
-          {/* Import chatBox for showing Message--------------*/}
+                {/* Import chatBox for showing Message--------------*/}
            <div className="">
             <ChatBox></ChatBox>
            </div>
         </div>
-      </div>
     </div>
   )
 }
